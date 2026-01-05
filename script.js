@@ -1,23 +1,109 @@
-function showWish() {
-    document.getElementById("wish").style.display = "block";
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-// Birthday countdown logic
-const today = new Date();
-const year = today.getFullYear();
-let birthday = new Date(year, 0, 14); // January = 0
-
-if (today > birthday) {
-    birthday = new Date(year + 1, 0, 14);
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(120deg, #ffd1dc, #c3c8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-const diff = birthday - today;
-const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+/* Card */
+.card {
+  background: white;
+  padding: 30px;
+  width: 340px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
 
-const countdown = document.getElementById("countdown");
+h1 {
+  color: #ff6f91;
+  margin-bottom: 5px;
+}
 
-if (days > 0) {
-    countdown.innerText = `🎈 ${days} day(s) to go`;
-} else {
-    countdown.innerText = "🎉 Today is the day!";
+/* Name */
+.name {
+  font-size: 24px;
+  color: #ff6f91;
+  font-weight: 600;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+
+/* Hearts */
+.hearts {
+  font-size: 20px;
+  animation: floatHearts 2.5s infinite ease-in-out;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+h2 {
+  margin-top: 15px;
+  color: #555;
+}
+
+p {
+  color: #444;
+  font-size: 15px;
+}
+
+/* Countdown */
+.countdown {
+  margin: 10px 0;
+  color: #ff6f91;
+  font-weight: bold;
+}
+
+/* Button */
+button {
+  background: #ff6f91;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #ff4f7b;
+}
+
+/* Wish text */
+.wish {
+  font-size: 14px;
+  color: #ff6f91;
+}
+
+/* Balloons */
+.balloons {
+  position: fixed;
+  right: 30px;
+  bottom: -50px;
+  font-size: 28px;
+  animation: floatBalloons 6s infinite linear;
+}
+
+@keyframes floatBalloons {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
 }
