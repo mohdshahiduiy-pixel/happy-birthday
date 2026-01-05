@@ -1,109 +1,26 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+// Countdown to 14 January
+const countdownEl = document.getElementById("countdown");
 
-body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(120deg, #ffd1dc, #c3c8ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+function updateCountdown() {
+  const now = new Date();
+  const year = now.getFullYear();
+  let birthday = new Date(`January 14, ${year}`);
 
-/* Card */
-.card {
-  background: white;
-  padding: 30px;
-  width: 340px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-h1 {
-  color: #ff6f91;
-  margin-bottom: 5px;
-}
-
-/* Name */
-.name {
-  font-size: 24px;
-  color: #ff6f91;
-  font-weight: 600;
-  margin: 5px 0;
-  letter-spacing: 1px;
-}
-
-/* Hearts */
-.hearts {
-  font-size: 20px;
-  animation: floatHearts 2.5s infinite ease-in-out;
-}
-
-@keyframes floatHearts {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-
-h2 {
-  margin-top: 15px;
-  color: #555;
-}
-
-p {
-  color: #444;
-  font-size: 15px;
-}
-
-/* Countdown */
-.countdown {
-  margin: 10px 0;
-  color: #ff6f91;
-  font-weight: bold;
-}
-
-/* Button */
-button {
-  background: #ff6f91;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  margin: 10px 0;
-  font-size: 14px;
-}
-
-button:hover {
-  background: #ff4f7b;
-}
-
-/* Wish text */
-.wish {
-  font-size: 14px;
-  color: #ff6f91;
-}
-
-/* Balloons */
-.balloons {
-  position: fixed;
-  right: 30px;
-  bottom: -50px;
-  font-size: 28px;
-  animation: floatBalloons 6s infinite linear;
-}
-
-@keyframes floatBalloons {
-  0% {
-    transform: translateY(0);
-    opacity: 0.8;
+  if (now > birthday) {
+    birthday = new Date(`January 14, ${year + 1}`);
   }
-  100% {
-    transform: translateY(-400px);
-    opacity: 0;
-  }
+
+  const diff = birthday - now;
+  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+  countdownEl.textContent = `🎈 ${days} day(s) to go`;
 }
+
+updateCountdown();
+
+// Surprise button
+function surprise() {
+  alert("🎉 Hope your day is as lovely as your smile 😊");
+}
+
+
