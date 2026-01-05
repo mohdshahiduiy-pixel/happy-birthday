@@ -1,86 +1,110 @@
-body {
-    margin: 0;
-    height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(120deg, #ffd1dc, #c3c8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Card */
 .card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 22px;
-    text-align: center;
-    width: 360px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    z-index: 2;
-    animation: floatIn 1s ease;
+  background: white;
+  padding: 30px;
+  width: 340px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 h1 {
-    color: #ff6f91;
+  color: #ff6f91;
+  margin-bottom: 5px;
+}
+
+/* Name */
+.name {
+  font-size: 24px;
+  color: #ff6f91;
+  font-weight: 600;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+
+/* Hearts */
+.hearts {
+  font-size: 20px;
+  animation: floatHearts 2.5s infinite ease-in-out;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 h2 {
-    color: #666;
-    font-weight: normal;
+  margin-top: 15px;
+  color: #555;
 }
 
 p {
-    font-size: 16px;
-    color: #444;
+  color: #444;
+  font-size: 15px;
 }
 
+/* Countdown */
 .countdown {
-    margin-top: 10px;
-    font-size: 15px;
-    color: #ff6f91;
+  margin: 10px 0;
+  color: #ff6f91;
+  font-weight: bold;
 }
 
+/* Button */
 button {
-    margin-top: 22px;
-    padding: 12px 26px;
-    border: none;
-    border-radius: 30px;
-    background: #ff6f91;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+  background: #ff6f91;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 14px;
 }
 
 button:hover {
-    background: #ff4f7b;
+  background: #ff4f7b;
 }
 
-.hidden {
-    display: none;
-    margin-top: 20px;
-    color: #ff6f91;
-    font-weight: 500;
+/* Wish text */
+.wish {
+  font-size: 14px;
+  color: #ff6f91;
 }
 
-/* 🎈 Floating Balloons */
-.balloons::before,
-.balloons::after {
-    content: "🎈 🎈 🎈 🎈 🎈";
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    animation: rise 10s linear infinite;
-    opacity: 0.7;
+/* Balloons */
+.balloons {
+  position: fixed;
+  right: 30px;
+  bottom: -50px;
+  font-size: 28px;
+  animation: floatBalloons 6s infinite linear;
 }
 
-.balloons::after {
-    animation-delay: 5s;
+@keyframes floatBalloons {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
 }
 
-@keyframes rise {
-    from {
-        bottom: -50px;
-    }
-    to {
