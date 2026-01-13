@@ -2,65 +2,252 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Riya 🎉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Riya 🎉</title>
+  <style>
+    /* ===========================
+       BODY & CARD STYLING
+    =========================== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffe4e1; /* soft pink */
+      overflow-x: hidden;
+      position: relative;
+    }
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    .card {
+      position: relative;
+      z-index: 10;
+      max-width: 90%;
+      margin: 40px auto;
+      padding: 25px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
 
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #ff69b4;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: #ff1493;
+    }
+
+    p.name {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    .letter {
+      position: relative;
+      z-index: 11;
+      margin-top: 15px;
+      height: 150px;
+      overflow-y: auto;
+      padding: 10px;
+      background: rgba(255, 240, 245, 0.9);
+      border-radius: 12px;
+      text-align: left;
+      font-size: 1em;
+      line-height: 1.4em;
+      scrollbar-width: thin;
+      scrollbar-color: #ff69b4 #fff0f5;
+    }
+
+    .letter::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .letter::-webkit-scrollbar-thumb {
+      background-color: #ff69b4;
+      border-radius: 3px;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 10px 15px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff69b4;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1493;
+    }
+
+    img.photo-card {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ===========================
+       FLOATING HEARTS
+    =========================== */
+    #floatingHearts span {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      font-size: 1.5em;
+      will-change: transform;
+    }
+
+    /* ===========================
+       BALLOONS
+    =========================== */
+    .balloons {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 20px;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    /* ===========================
+       CANVAS (Fireworks)
+    =========================== */
+    canvas#fireworks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0; /* behind everything */
+      pointer-events: none;
+    }
+
+    /* ===========================
+       MEDIA QUERIES (Mobile)
+    =========================== */
+    @media (max-width: 480px) {
+      .card { padding: 20px; }
+      h1 { font-size: 1.8em; }
+      h2 { font-size: 1.3em; }
+      p.name { font-size: 1.1em; }
+      .letter { height: 120px; font-size: 0.95em; }
+      .balloons { font-size: 1.5em; }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Fireworks Canvas -->
   <canvas id="fireworks"></canvas>
 
-  <!-- Music -->
-  <audio id="birthdayMusic" loop>
-    <source src="birthday.mp3" type="audio/mpeg">
-  </audio>
-
-  <audio id="romanticMusic" loop>
-    <source src="romantic.mp3" type="audio/mpeg">
-  </audio>
-
   <!-- Floating Hearts -->
   <div id="floatingHearts"></div>
 
   <!-- Balloons -->
-  <div class="balloons">🎈 🎈 🎈 🎈 🎈</div>
+  <div class="balloons">🎈🎈🎈</div>
 
-  <!-- Card -->
- <div class="card">
-  <h1>🎉 Happy Birthday 🎉</h1>
-  
-  <!-- Name + Avatar + Heart -->
-  <p class="name">
-    Riya ✨
-    <img src="4f5d16ef-cebd-41a9-928c-6c585c2bd0ac.jpeg" class="avatar-front">
-    <span class="heart-front">❤️</span>
-  </p>
+  <!-- Birthday Card -->
+  <div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <p class="name">Riya ✨</p>
 
-  <div class="hearts">❤️ 💖 💕</div>
+    <!-- Riya's photo -->
+    <img id="photo" src="dad97ea5-b973-434c-8c8f-8fbc026467eb.jpeg" alt="Riya's Photo" class="photo-card">
 
-  <h2>14 January 🎂</h2>
+    <!-- Letter -->
+    <div class="letter">
+      Dear Riya, 🌸<br><br>
+      I don’t really know yet what I feel in my heart for you 💛,
+      or what you think about me — and I understand that you might see me as just a friend, nothing more than that 🤍.<br><br>
+      But somehow, small things between us feel like a butterfly effect 🦋.
+      A tiny moment, a glance 👀, a smile 😊, or the way you...
+    </div>
 
-  <p>
-    Wishing you a day full of happiness,<br>
-    smiles, and beautiful moments 💐
-  </p>
+    <button id="surpriseBtn">Surprise!</button>
+    <button id="confessBtn">Confess</button>
+  </div>
 
-  <!-- Surprise Buttons -->
-  <button id="surpriseBtn">A Little Surprise 🎁</button>
-  <button id="confessBtn" style="display:none;">Special Words 💌</button>
+  <script>
+    // ===========================
+    // Floating Hearts Animation
+    // ===========================
+    const heartsContainer = document.getElementById('floatingHearts');
 
-  <!-- Letter -->
-  <div id="letter" class="letter"></div>
+    function createHeart() {
+      const heart = document.createElement('span');
+      heart.innerText = '❤️';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      heartsContainer.appendChild(heart);
 
-  <!-- Photo -->
-  <img id="photo" src="riya-photo.jpeg" alt="Riya" style="display:none; width: 250px; border-radius: 15px; margin-top: 15px;" />
-</div>
+      let speed = 1 + Math.random() * 3;
+      let pos = window.innerHeight;
 
-  <!-- JS -->
-  <script src="script.js"></script>
+      function floatUp() {
+        pos -= speed;
+        heart.style.top = pos + 'px';
+        heart.style.opacity = pos/window.innerHeight;
+        if(pos < -50) heart.remove();
+        else requestAnimationFrame(floatUp);
+      }
+
+      floatUp();
+    }
+
+    setInterval(createHeart, 300);
+
+    // ===========================
+    // Fireworks Canvas
+    // ===========================
+    const canvas = document.getElementById('fireworks');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const fireworks = [];
+    class Firework {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height/2;
+        this.radius = Math.random() * 2 + 1;
+        this.color = 'hsl(' + Math.random()*360 + ', 100%, 50%)';
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+      update() {
+        this.y -= 2;
+        if(this.y < 0) this.y = canvas.height;
+      }
+    }
+
+    for(let i=0;i<100;i++) fireworks.push(new Firework());
+
+    function animate() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      fireworks.forEach(f => { f.update(); f.draw(); });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+
 </body>
 </html>
