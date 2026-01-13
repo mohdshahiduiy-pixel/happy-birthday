@@ -100,3 +100,20 @@ canvas#fireworks {
   z-index: 1;
   pointer-events: none;
 }
+/* Front page avatar */
+.avatar-front {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 10px;
+  border: 2px solid #ff1493; /* optional pink border */
+}
+
+/* Red heart next to avatar */
+.heart-front {
+  font-size: 1.5em;
+  color: red;
+  margin-left: 6px;
+  vertical-align: middle;
+}
