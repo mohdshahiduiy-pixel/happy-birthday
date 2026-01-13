@@ -138,9 +138,16 @@ surpriseBtn.addEventListener("click", () => {
 // Confess button
 confessBtn.addEventListener("click", () => {
   confessBtn.style.display = "none";
+
   photo.style.display = "block";
+
+  letterBox.style.display = "block";   // ✅ force show letter
+  letterBox.innerHTML = "";            // ✅ clear old text
+  i = 0;                               // ✅ reset typewriter
+
   typeWriter(confession);
 });
+
 
 // ===========================
 // TYPEWRITER EFFECT
