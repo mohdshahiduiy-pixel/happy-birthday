@@ -5,7 +5,6 @@ Some moments feel small at first,
 but they stay with us quietly 🦋`;
 
 const fullText = `Dear Riya, 🌸
-
 I don’t really know yet what I feel in my heart for you 💛,
 or what you think about me — and I understand that you might see me as just a friend, nothing more than that 🤍.
 I respect that completely, and I don’t want to assume anything that isn’t there.
@@ -87,7 +86,6 @@ What we already share is still beautiful in its own way ✨,
 and I truly value it —
 deeply and sincerely 💖.
 `;
-
 
 
 /* ================= TYPEWRITER ================= */
