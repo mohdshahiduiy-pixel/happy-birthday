@@ -34,30 +34,86 @@ Dear Riya, 🌸
 
 I don’t really know yet what I feel in my heart for you 💛,
 or what you think about me — and I understand that you might see me as just a friend, nothing more than that 🤍.
+I respect that completely, and I don’t want to assume anything that isn’t there.
 
-But somehow, small things between us feel like a butterfly effect 🦋.
-A tiny moment, a glance 👀, a smile 😊, or the way you laughed 😄,
-and suddenly my day, my thoughts, my feelings start changing in ways I didn’t expect ✨.
+But somewhere between 26th December 📅, when we met and talked,
+and 27th December, when our conversations felt indirect yet full of feeling,
+something quietly changed for me.
+It wasn’t loud or sudden.
+It wasn’t dramatic.
+It was subtle — almost unnoticeable at first — but it stayed with me 🦋.
 
-On 26th December, when you were crying 😢, I couldn’t just look away.
-I asked if you were okay, we talked 💬, and from that moment, so many little moments started to matter 🌟.
-Sitting together in the library 📚, noticing we were both born on Wednesday 🗓️,
-or how on New Year’s Day we wore almost the same colour clothes 👕👗 — it all felt like tiny coincidences, but somehow, they all added up to something magical ✨💫.
+That day, when you were crying 😢,
+I couldn’t ignore it.
+I couldn’t pretend not to see it.
+I couldn’t just walk away or act normal.
+Seeing you like that affected me more than I expected.
+I asked if you were okay because I genuinely wanted to know,
+not because I felt I should.
+We talked… 💬
+and after that, something felt different —
+like a door had opened slowly, without either of us forcing it ✨.
 
-Even the way you feel comfortable with me 🤗,
-the way we can be touchy without it ever feeling awkward 💞,
-it’s a feeling I’ve never had with anyone before 🌷.
+After that, so many small things started happening naturally 🌱 —
+things that might seem ordinary on their own,
+but together felt meaningful.
+Sitting together in the library 📚,
+talking more than before,
+sharing quiet moments without realizing how time was passing.
 
-All of these small, ordinary moments — your smile 😁, your blush 😊, the chocolate 🍫, the little thumbs-up 👍 —
-they feel like tiny butterflies 🦋 that have quietly started a wind,
-moving something bigger inside me 💖💫.
+Even small details started standing out to me —
+like noticing that we were both born on the same day, a Wednesday 🗓️,
+or how you started coming into my mind unexpectedly,
+sometimes just because of your crokes,
+sometimes for no clear reason at all.
 
-Somewhere inside, I feel like I think of you as more than a friend 💛.
-If that’s possible, I’d be grateful 🌸. And if it’s not, that’s completely okay too 🤍.
+On New Year’s Day 🎆,
+when we wore almost the same colour clothes 👕👗,
+I couldn’t help but smile 😊.
+You looked genuinely cute —
+honestly, you reminded me of Santa Claus 🎅 in the best way possible,
+just because of your outfit and the colours you wore.
+It was such a simple coincidence,
+yet it stayed in my mind longer than I expected 💫.
 
-What we already share is still beautiful in its own way 🌷✨,
-and I truly value it 💖.
+And then there’s something I’ve never really experienced before.
+
+The way you feel comfortable around me 🤍 —
+even with touch —
+it never felt awkward or forced.
+It felt natural.
+Easy.
+Safe.
+I’ve never been that touchy with anyone in my life,
+not in that way,
+not without feeling self-conscious or unsure.
+But with you, it was different.
+There was no tension,
+no discomfort —
+just comfort and closeness that felt honest 💞.
+
+Somewhere in all these little moments —
+the conversations,
+the silences,
+the coincidences,
+the comfort —
+it feels like a bond has been forming on its own 🌷.
+Not rushed.
+Not planned.
+Just growing quietly,
+like something that didn’t need permission to exist 🦋.
+
+I feel like I think of you as more than a friend 💛.
+If that’s possible, I’d be grateful 🌸.
+And if it’s not, that’s completely okay too 🤍.
+I don’t want to pressure anything
+or change what already is.
+
+What we already share is still beautiful in its own way ✨,
+and I truly value it —
+deeply and sincerely 💖.
 `;
+
 
 // ===========================
 // AUTOPLAY MUSIC SAFELY
