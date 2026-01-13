@@ -30,7 +30,11 @@ resizeCanvas();
 // CONFESSION TEXT
 // ===========================
 
-`const confession = `
+// ===========================
+// CONFESSION TEXT
+// ===========================
+
+const confession = `
 Dear Riya, 🌸
 
 I don’t really know yet what I feel in my heart for you 💛,
@@ -64,34 +68,13 @@ sharing quiet moments without realizing how time was passing.
 
 Even small details started standing out to me —
 like noticing that we were both born on the same day, a Wednesday 🗓️,
-or how you started coming into my mind unexpectedly,
-sometimes just because of your crokes,
-sometimes for no clear reason at all.
+or how you started coming into my mind unexpectedly.
 
 On New Year’s Day 🎆,
 when we wore almost the same colour clothes 👕👗,
 I couldn’t help but smile 😊.
 You looked genuinely cute —
-honestly, you reminded me of Santa Claus 🎅 in the best way possible,
-just because of your outfit and the colours you wore.
-It was such a simple coincidence,
-yet it stayed in my mind longer than I expected 💫.
-
-And then there’s something I’ve never really experienced before.
-
-The way you feel comfortable around me 🤍 —
-even with touch —
-it never felt awkward or forced.
-It felt natural.
-Easy.
-Safe.
-I’ve never been that touchy with anyone in my life,
-not in that way,
-not without feeling self-conscious or unsure.
-But with you, it was different.
-There was no tension,
-no discomfort —
-just comfort and closeness that felt honest 💞.
+honestly, you reminded me of Santa Claus 🎅 in the best way possible.
 
 Somewhere in all these little moments —
 the conversations,
@@ -99,21 +82,15 @@ the silences,
 the coincidences,
 the comfort —
 it feels like a bond has been forming on its own 🌷.
-Not rushed.
-Not planned.
-Just growing quietly,
-like something that didn’t need permission to exist 🦋.
 
 I feel like I think of you as more than a friend 💛.
 If that’s possible, I’d be grateful 🌸.
 And if it’s not, that’s completely okay too 🤍.
-I don’t want to pressure anything
-or change what already is.
 
 What we already share is still beautiful in its own way ✨,
-and I truly value it —
-deeply and sincerely 💖.
+and I truly value it — deeply and sincerely 💖.
 `;
+
 
 
 // ===========================
