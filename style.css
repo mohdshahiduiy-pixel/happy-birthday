@@ -1,64 +1,60 @@
-/* ===========================
-   BODY & CARD STYLING
-=========================== */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #ffe4e1; /* soft pink background */
+  background: #ffe4e1;
   overflow-x: hidden;
-  position: relative;
 }
 
+/* Fireworks canvas */
+#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Card */
 .card {
   max-width: 450px;
   margin: 80px auto;
   padding: 25px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+  position: relative;
+  z-index: 10;
 }
 
 h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
   color: #ff69b4;
 }
 
 h2 {
-  font-size: 1.5em;
-  margin: 10px 0;
   color: #ff1493;
 }
 
-p.name {
+.name {
   font-size: 1.3em;
   font-weight: bold;
   color: #ff4500;
 }
 
-.letter {
-  margin-top: 15px;
-  height: 200px;
-  overflow-y: auto;
-  padding: 10px;
-  background: #fff0f5;
-  border-radius: 12px;
-  text-align: left;
-  font-size: 1em;
-  line-height: 1.4em;
-}
-
+/* Buttons */
 button {
-  margin: 10px 5px;
-  padding: 10px 15px;
-  font-size: 1em;
+  margin: 10px;
+  padding: 10px 16px;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
+  font-size: 1em;
   background: #ff69b4;
   color: white;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -66,37 +62,43 @@ button:hover {
   background: #ff1493;
 }
 
-img {
-  display: block;
+/* Photo */
+#photo {
+  display: none;
+  width: 250px;
   margin: 15px auto;
+  border-radius: 15px;
 }
 
-/* ===========================
-   FLOATING HEARTS
-=========================== */
+/* Letter */
+.letter {
+  display: none;
+  margin-top: 15px;
+  height: 220px;
+  padding: 12px;
+  background: #fff0f5;
+  border-radius: 12px;
+  text-align: left;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+/* Floating hearts */
 #floatingHearts span {
   position: fixed;
+  font-size: 20px;
   pointer-events: none;
   z-index: 9999;
+  animation: floatUp linear forwards;
 }
 
-/* ===========================
-   BALLOONS
-=========================== */
-.balloons {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 20px;
-  pointer-events: none;
-}
-
-/* ===========================
-   CANVAS
-=========================== */
-canvas#fireworks {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
 }
