@@ -64,7 +64,7 @@ h1 {
 }
 
 .photo-card {
-  width: 300px;  /* exact screenshot width */
+  width: 500px;  /* exact screenshot width */
   height: 600px; /* exact screenshot height */
   border-radius: 15px;
 }
