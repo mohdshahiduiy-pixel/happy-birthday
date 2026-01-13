@@ -1,69 +1,59 @@
-// ===========================
-// Floating Hearts Animation
-// ===========================
-const heartsContainer = document.getElementById('floatingHearts');
+/* FLOATING HEARTS */
+const heartBox = document.getElementById("floatingHearts");
 
 function createHeart() {
-  const heart = document.createElement('span');
-  heart.innerText = '❤️';
-  heart.style.left = Math.random() * window.innerWidth + 'px';
-  heart.style.top = window.innerHeight + 'px';
-  heartsContainer.appendChild(heart);
+  const heart = document.createElement("span");
+  heart.innerText = "❤️";
+  heart.style.left = Math.random() * window.innerWidth + "px";
+  heart.style.top = window.innerHeight + "px";
+  heartBox.appendChild(heart);
 
-  let speed = 1 + Math.random() * 3;
-  let pos = window.innerHeight;
+  let y = window.innerHeight;
+  const speed = 1 + Math.random() * 2;
 
-  function floatUp() {
-    pos -= speed;
-    heart.style.top = pos + 'px';
-    heart.style.opacity = pos/window.innerHeight;
-    if(pos < -50) heart.remove();
-    else requestAnimationFrame(floatUp);
+  function move() {
+    y -= speed;
+    heart.style.top = y + "px";
+    heart.style.opacity = y / window.innerHeight;
+    if (y < -50) heart.remove();
+    else requestAnimationFrame(move);
   }
-
-  floatUp();
+  move();
 }
 
 setInterval(createHeart, 300);
 
-// ===========================
-// Fireworks Canvas
-// ===========================
-const canvas = document.getElementById('fireworks');
-const ctx = canvas.getContext('2d');
+/* FIREWORKS */
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+window.addEventListener("resize", resizeCanvas);
 
-const fireworks = [];
-class Firework {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height/2;
-    this.radius = Math.random() * 2 + 1;
-    this.color = 'hsl(' + Math.random()*360 + ', 100%, 50%)';
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  }
-  update() {
-    this.y -= 2;
-    if(this.y < 0) this.y = canvas.height;
-  }
+const sparks = [];
+for (let i = 0; i < 80; i++) {
+  sparks.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height / 2,
+    r: Math.random() * 2 + 1,
+    c: `hsl(${Math.random() * 360},100%,50%)`
+  });
 }
 
-for(let i=0;i<100;i++) fireworks.push(new Firework());
-
 function animate() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  fireworks.forEach(f => { f.update(); f.draw(); });
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  sparks.forEach(s => {
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fillStyle = s.c;
+    ctx.fill();
+    s.y -= 1.5;
+    if (s.y < 0) s.y = canvas.height;
+  });
   requestAnimationFrame(animate);
 }
 
