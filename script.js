@@ -5,6 +5,9 @@ const photo = document.getElementById("photo");
 const surpriseBtn = document.getElementById("surpriseBtn");
 const confessBtn = document.getElementById("confessBtn");
 
+// Add this line:
+let i = 0; // counter for typeWriter
+
 /* Try autoplay safely */
 window.addEventListener("click", () => {
   if (birthdayMusic.paused) birthdayMusic.play().catch(()=>{});
