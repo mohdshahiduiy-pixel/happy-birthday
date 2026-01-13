@@ -2,40 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday 🎉</title>
+  <title>Happy Birthday Riya 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Fireworks Canvas -->
+  <canvas id="fireworks"></canvas>
+
+  <!-- Music -->
+  <audio id="birthdayMusic" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="romanticMusic" loop>
+    <source src="romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Hearts -->
+  <div id="floatingHearts"></div>
+
   <!-- Balloons -->
   <div class="balloons">🎈 🎈 🎈 🎈 🎈</div>
 
-  <!-- Main Card -->
+  <!-- Card -->
   <div class="card">
     <h1>🎉 Happy Birthday 🎉</h1>
-
     <p class="name">Riya ✨</p>
-
     <div class="hearts">❤️ 💖 💕</div>
 
     <h2>14 January 🎂</h2>
 
     <p>
-      Wishing you a day full of happiness, smiles,  
+      Wishing you a day full of happiness, smiles,<br>
       and beautiful moments 💐
     </p>
 
-    <p id="countdown" class="countdown"></p>
+    <!-- Surprise Buttons -->
+    <button id="surpriseBtn">A Little Surprise 🎁</button>
+    <button id="confessBtn">Special Words 💌</button>
 
-    <button onclick="surprise()">A Little Surprise 🎁</button>
+    <!-- Photo -->
+    <img id="photo" src="riya.jpg" alt="Riya" />
 
-    <p class="wish">
-      May this year bring you peace, positivity,  
-      and many reasons to smile ✨
-    </p>
+    <!-- Letter -->
+    <div id="letter" class="letter"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
