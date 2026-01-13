@@ -58,14 +58,23 @@ confessBtn.addEventListener("click", () => {
 });
 
 /* Typing effect */
-let i = 0;
 function typeWriter(text) {
   if (i < text.length) {
+    // Add one character at a time
     letterBox.innerHTML += text.charAt(i) === "\n" ? "<br>" : text.charAt(i);
     i++;
+
+    // Scroll the page to the bottom automatically
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+
+    // Continue typing
     setTimeout(() => typeWriter(text), 40);
   }
 }
+
 
 /* Floating hearts */
 function startHearts() {
