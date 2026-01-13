@@ -1,96 +1,82 @@
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top, #ff9a9e, #fad0c4);
+  overflow-x: hidden;
 }
 
-canvas {
+canvas#fireworks {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .balloons {
-  position: absolute;
-  top: 20px;
-  font-size: 32px;
-  z-index: 2;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 25px;
-  border-radius: 22px;
-  max-width: 520px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  text-align: center;
+  position: relative;
   z-index: 2;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-h1 {
-  color: #e60073;
-}
-
-.name {
-  font-size: 28px;
-  font-weight: bold;
-  color: #ff3366;
-}
-
-.hearts {
-  font-size: 22px;
+.card h1, .card h2 {
   margin: 10px 0;
 }
 
+.card img {
+  width: 80%;
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 button {
-  margin: 12px 6px;
-  padding: 12px 28px;
-  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
   border: none;
-  border-radius: 30px;
-  background: #ff4d6d;
-  color: white;
   cursor: pointer;
+  transition: all 0.3s;
+  background: #ff6b81;
+  color: white;
 }
 
 button:hover {
-  background: #e60073;
-}
-
-#photo {
-  display: none;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 20px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+  background: #ff4757;
 }
 
 .letter {
-  margin-top: 15px;
-  font-size: 17px;
-  line-height: 1.6;
+  display: none;
+  margin-top: 20px;
+  font-size: 1.1rem;
   color: #333;
-  min-height: 140px;
+  line-height: 1.5;
 }
 
-/* Floating hearts */
-#floatingHearts span {
+#floatingHearts div {
   position: absolute;
-  bottom: -20px;
-  font-size: 22px;
-  animation: floatUp 6s linear infinite;
+  animation: float 5s linear infinite;
+  font-size: 20px;
 }
 
-@keyframes floatUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-110vh); opacity: 0; }
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
 }
-
