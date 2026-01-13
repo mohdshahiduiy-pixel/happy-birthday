@@ -12,12 +12,14 @@ body {
   max-width: 95%;
   margin: 40px auto;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255,255,255,0.95);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   position: relative;
   z-index: 5;
+  height: auto; /* <-- add this */
 }
+
 
 h1 {
   text-align: center;
@@ -40,6 +42,7 @@ h1 {
   display: flex;
   gap: 20px;
   align-items: flex-start;
+  height: auto; /* <-- add this */
 }
 
 .letter {
@@ -47,11 +50,12 @@ h1 {
   background: #fff0f5;
   padding: 15px;
   border-radius: 12px;
-  height: 260px;
+  height: 600px; /* match photo height */
   overflow-y: auto;
   line-height: 1.5em;
-  white-space: pre-line; /* preserves spaces & line breaks */
+  white-space: pre-line;
 }
+
 
 .photo-wrapper {
   flex: 1;
