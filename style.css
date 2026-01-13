@@ -1,100 +1,102 @@
+/* ===========================
+   BODY & CARD STYLING
+=========================== */
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
-}
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.balloons {
-  position: absolute;
-  top: 20px;
-  font-size: 32px;
-  z-index: 2;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffe4e1; /* soft pink background */
+  overflow-x: hidden;
+  position: relative;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.95);
+  max-width: 450px;
+  margin: 80px auto;
   padding: 25px;
-  border-radius: 22px;
-  max-width: 520px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
   text-align: center;
-  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 h1 {
-  color: #e60073;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #ff69b4;
 }
 
-.name {
-  font-size: 28px;
-  font-weight: bold;
-  color: #ff3366;
-}
-
-.hearts {
-  font-size: 22px;
+h2 {
+  font-size: 1.5em;
   margin: 10px 0;
+  color: #ff1493;
 }
 
-button {
-  margin: 12px 6px;
-  padding: 12px 28px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  background: #ff4d6d;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #e60073;
-}
-
-#photo {
-  display: none;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 20px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+p.name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ff4500;
 }
 
 .letter {
-  display: none;
-  max-height: 400px;       /* fixed height for the letter box */
-  overflow-y: auto;        /* scroll inside the box */
-  padding: 15px;
-  background: #fffaf0;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  line-height: 1.5;
-  font-size: 1.1rem;
-  color: #333;
+  margin-top: 15px;
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #fff0f5;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.4em;
 }
 
-/* Floating hearts */
+button {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ff69b4;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+img {
+  display: block;
+  margin: 15px auto;
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
 #floatingHearts span {
-  position: absolute;
-  bottom: -20px;
-  font-size: 22px;
-  animation: floatUp 6s linear infinite;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
 }
 
-@keyframes floatUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-110vh); opacity: 0; }
+/* ===========================
+   BALLOONS
+=========================== */
+.balloons {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+  pointer-events: none;
+}
+
+/* ===========================
+   CANVAS
+=========================== */
+canvas#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
 }
